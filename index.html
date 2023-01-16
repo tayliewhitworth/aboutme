@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!-- EXAMPLE CODE HEADER/DISCLAIMER
+ 
+Project:  Project1-About Me
+Name: Taylie Whitworth
+Submitted: 1/14/2023
+ 
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+ 
+Reflection (1-2 paragraphs):  I liked going back to the basics of HTML and learning more about tables. I have been coding
+for about a year now and sometimes overlook HTML. It is always good to refresh my skills and learn more about good syntax.
+I am one of those developers that struggle with the overuse of divs so I really tried to focus on using sections instead. 
+It is important to use sematic elements.   
+ 
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Taylie Whitworth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Rubik", sans-serif;
+        background-image: url("https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-repeat: repeat;
+        background-position: center;
+        display: grid;
+        place-items: center;
+        margin-top: 20px;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      img {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: scale 0.2s ease-in-out;
+      }
+
+      img:hover {
+        scale: 1.1;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: cornflowerblue;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header section -->
+    <h1>Taylie Whitworth</h1>
+    <img src="./card-pic.jpg" alt="profile pic" />
+
+    <!-- Personal info -->
+    <section>
+      <h2>Personal Info:</h2>
+      <ul>
+        <li><strong>Major: </strong>Software Engineering</li>
+        <li><strong>High School: </strong>Corner Canyon High School - 2017</li>
+        <li><strong>Current Year at UVU: </strong>Sophomore</li>
+        <li><strong>Favorite Ice Cream: </strong>Cookie Dough Ice Cream🍦</li>
+      </ul>
+    </section>
+
+    <!-- Favorite Books -->
+    <section>
+      <h2>My five favorite books</h2>
+      <ol>
+        <li>
+          <em>It ends with us, </em
+          ><a href="http://www.colleenhoover.com/" target="_blank"
+            >Colleen Hoover</a
+          >
+        </li>
+        <li>
+          <em>Verity, </em
+          ><a href="http://www.colleenhoover.com/" target="_blank"
+            >Colleen Hoover</a
+          >
+        </li>
+        <li>
+          <em>Can't Hurt Me, </em
+          ><a href="https://davidgoggins.com/book/" target="_blank"
+            >David Goggins</a
+          >
+        </li>
+        <li>
+          <em>Ugly Love, </em
+          ><a href="http://www.colleenhoover.com/" target="_blank"
+            >Colleen Hoover</a
+          >
+        </li>
+        <li>
+          <em>You are a Badass, </em
+          ><a href="https://jensincero.com/" target="_blank">Jen Sincero</a>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Haiku Section -->
+    <section>
+      <h2>A Haiku about Golden Doodles</h2>
+      <p>The inspo for this haiku comes from how much I love golden doodles</p>
+      <p style="text-align: center">
+        <em
+          >Wagging tail, happy dog<br />Loyal companion, by your side<br />Fur
+          as soft as clouds</em
+        >
+      </p>
+    </section>
+
+    <!-- Personal interests -->
+    <section style="display: grid; place-items: center; width: 50%">
+      <h2>Personal Interests</h2>
+      <p>
+        I recently have found a love for programming and now code almost
+        everyday. I started to learn how to code almost a year ago and have
+        loved it ever since. The reason I started coding was because I wanted to
+        find something that I could do as a career that I would actually enjoy.
+      </p>
+      <p>
+        Programming has opened up so many doors for me and I can't wait to see
+        what else happens. I have coded many websites, apps and even a few
+        games. My favorite programming languages are Python, JavaScript and
+        React.
+      </p>
+      <p>
+        Besides programming, I love being active. I am always down to go on an
+        adventure and explore the world. I love to travel and see unique
+        cultures.
+      </p>
+    </section>
+
+    <!-- Class schedule -->
+    <section>
+      <h2>Class Schedule</h2>
+      <table
+        style="border: 1px solid black"
+        border="1"
+        cellspacing="3"
+        cellpadding="3"
+      >
+        <tr>
+          <th></th>
+          <th width="100px">Monday</th>
+          <th width="100px">Tuesday</th>
+          <th width="100px">Wednesday</th>
+          <th width="100px">Thursday</th>
+          <th width="100px">Friday</th>
+        </tr>
+        <tr>
+          <td>8:00am</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>8:30am</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>9:00am</td>
+          <td rowspan="2" style="background-color: #999bd0">CS 2420</td>
+          <td></td>
+          <td rowspan="2" style="background-color: #999bd0">CS 2420</td>
+          <td></td>
+          <td rowspan="2" style="background-color: #999bd0">CS 2420</td>
+        </tr>
+        <tr>
+          <td>9:30am</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>10:00am</td>
+          <td></td>
+          <td rowspan="2" style="background-color: #b59fd7">COMM 2010</td>
+          <td></td>
+          <td rowspan="2" style="background-color: #b59fd7">COMM 2010</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>10:30am</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>11:00am</td>
+          <td rowspan="2" style="background-color: #d1a3df">CS 2550</td>
+          <td></td>
+          <td rowspan="2" style="background-color: #d1a3df">CS 2550</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>11:30am</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>12:00pm</td>
+          <td
+            colspan="5"
+            rowspan="5"
+            style="text-align: center; background-color: #e7bbdb"
+          >
+            Work
+          </td>
+        </tr>
+        <tr>
+          <td>12:30pm</td>
+        </tr>
+        <tr>
+          <td>1:00pm</td>
+        </tr>
+        <tr>
+          <td>1:30pm</td>
+        </tr>
+
+        <tr>
+          <td>2:00pm</td>
+        </tr>
+        <tr>
+          <td>2:30pm</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>3:00pm</td>
+          <td></td>
+          <td rowspan="2" style="background-color: #dcafdd">CS 2300</td>
+          <td></td>
+          <td rowspan="2" style="background-color: #dcafdd">CS 2300</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3:30pm</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>4:00pm</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4:30pm</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>5:00pm</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>5:30pm</td>
+          <td style="background-color: #cc81cd">Workout</td>
+          <td></td>
+          <td style="background-color: #cc81cd">Workout</td>
+          <td></td>
+          <td style="background-color: #cc81cd">Workout</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- --SELF GRADE--
+    HEADER                   A
+    PERSONAL INFO            A 
+    FAVE BOOKS               A
+    HAIKU                    A
+    ESSAY                    A
+
+    SCHEDULE                 A
+
+    --EXTRA ITEMS COMPLETED--Minimum of 5
+    REPEATING BKG IMG (2pts)            YES
+    CHANGE FONT (2pts)                  YES
+    RT ALIGN PHOTO (2pts)               NO
+
+    INDENT/CENTER HAIKU (2pts)          YES
+
+    TABLE-TEXT ALIGN (2pts)             NO
+
+    TABLE-COLOR CODE (2pts)             YES
+
+    TABLE-EQUAL COL WIDTH (2pts)         YES
+
+    ADDITIONAL COMMENTS -->
+  </body>
+</html>
