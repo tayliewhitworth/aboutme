@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Lobster+Two:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  --baby-blue: #999bd0;
+  --baby-purple: #b59fd7;
+  --dark-pink: #d1a3df;
+  --pink: #e7bbdb;
+  --light-pink: #dcafdd;
+  --baby-pink: #cc81cd;
+
+  /* dark pink and pink */
+
+  --dark-mode-blue: #3a0ca3;
+  --dark-mode-light: #4361ee;
+
+  --foreground: var(--dark-mode-light);
+
+  --font-color: black;
+}
+
+.darkmode {
+  --pink: var(--dark-mode-light);
+  --dark-pink: var(--dark-mode-blue);
+
+  --foreground: var(--light-pink);
+  --font-color: white;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+  background: radial-gradient(
+        farthest-side at -33.33% 50%,
+        #0000 52%,
+        var(--dark-pink) 54% 57%,
+        #0000 59%
+      )
+      0 calc(168px / 2),
+    radial-gradient(
+        farthest-side at 50% 133.33%,
+        #0000 52%,
+        var(--dark-pink) 54% 57%,
+        #0000 59%
+      )
+      calc(168px / 2) 0,
+    radial-gradient(
+      farthest-side at 133.33% 50%,
+      #0000 52%,
+      var(--dark-pink) 54% 57%,
+      #0000 59%
+    ),
+    radial-gradient(
+      farthest-side at 50% -33.33%,
+      #0000 52%,
+      var(--dark-pink) 54% 57%,
+      #0000 59%
+    ),
+    var(--pink);
+  background-size: calc(168px / 4.667) 168px, 168px calc(168px / 4.667);
+  margin: 20px 50px;
+  padding: 0 50px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 800px;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 30pt;
+  /* font-family: 'Anton', sans-serif; */
+  font-family: "Space Mono", monospace;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  text-shadow: 1px 3px 3px #000;
+  background-color: #999bd0;
+  text-align: center;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+h2 {
+  font-size: 20pt;
+  font-family: "Josefin Sans", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1),
+    1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+section {
+  padding-bottom: 30px;
+}
+
+p,
+li {
+  color: var(--font-color);
+}
+
+.profile-pic {
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: scale 0.2s ease-in-out;
+  float: right;
+}
+
+.profile-pic:hover {
+  scale: 1.1;
+}
+
+.container .popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30pt;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.img-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background-color: #999bd0;
+  border-radius: 8px;
+  width: 600px;
+  box-shadow: var(--shadow);
+}
+
+.img-card img {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.img-card p {
+  font-size: 16px;
+  color: white;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: cornflowerblue;
+  font-weight: 700;
+}
+
+table {
+  border: 1px solid #999bd0;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: var(--shadow);
+  text-align: center;
+  overflow: hidden;
+}
+
+table th {
+  width: 100px;
+  background-color: #b59fd7;
+}
+
+th,
+td {
+  padding: 10px 5px;
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(153, 155, 208, 0.3);
+}
+
+.cs2420 {
+  background-color: #999bd0;
+}
+
+.com2010 {
+  background-color: #b59fd7;
+}
+
+.cs2550 {
+  background-color: #d1a3df;
+}
+
+.work {
+  background-color: #e7bbdb;
+}
+
+.cs2300 {
+  background-color: #dcafdd;
+}
+
+.workout {
+  background-color: #cc81cd;
+}
+
+
+/* Toggle mode */
+
+.dark-mode-toggle {
+  position: absolute;
+  z-index: 100;
+  top: 1em;
+  left: 5em;
+  width: 30px;
+  height: 30px;
+  color: var(--foreground);
+  border: 2px solid;
+  padding: 4px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dark-mode-toggle:hover {
+  box-shadow: var(--shadow);
+}
+
+.click-here {
+  width: 100px;
+  position: absolute;
+  left: -1em;
+  top: 4em;
+}
