@@ -30,7 +30,7 @@
 
 body {
   font-family: "Rubik", sans-serif;
-  font-size: 12px;
+  font-size: 12pt;
   background: radial-gradient(
         farthest-side at -33.33% 50%,
         #0000 52%,
@@ -267,7 +267,7 @@ tr:nth-child(odd) {
   }
 
   .profile-pic {
-    float: left;
+    float: none;
     margin-bottom: 1.5rem;
   }
 
