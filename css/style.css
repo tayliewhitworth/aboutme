@@ -67,7 +67,7 @@ body {
 }
 
 .container {
-  width: 800px;
+  max-width: 800px;
   height: 100vh;
 }
 
@@ -166,13 +166,15 @@ li {
 }
 
 a {
-  color: inherit;
+  color: var(--foreground);
+  box-shadow: inset 0 0 0 0 var(--foreground);
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
-  color: cornflowerblue;
-  font-weight: 700;
+  box-shadow: inset 100px 0 0 0 var(--foreground);
+  color: white;
 }
 
 table {
@@ -222,7 +224,6 @@ tr:nth-child(odd) {
   background-color: #cc81cd;
 }
 
-
 /* Toggle mode */
 
 .dark-mode-toggle {
@@ -249,4 +250,34 @@ tr:nth-child(odd) {
   position: absolute;
   left: -1em;
   top: 4em;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 50px 0px;
+    margin: 20px 15px;
+    place-items: left;
+  }
+
+  h1 {
+    font-size: 20pt;
+    text-align: left;
+    width: fit-content;
+    padding-inline: 10px;
+  }
+
+  .profile-pic {
+    float: left;
+    margin-bottom: 1.5rem;
+  }
+
+  .dark-mode-toggle {
+    top: 0.05em;
+    left: 7em;
+  }
+
+  .click-here {
+    top: 2.5em;
+    left: 1em;
+  }
 }
